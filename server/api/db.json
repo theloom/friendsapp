@@ -12,20 +12,34 @@
       "first_name": "Kim",
       "last_name": "Brannock",
       "gender": "female",
-      "fav": false
+      "fav": true
     },
     {
       "id": 3,
       "first_name": "Steve",
       "last_name": "Van Dyke",
       "gender": "none",
-      "fav": false
+      "fav": true
     },
     {
       "id": 4,
-      "first_name": "Nate",
-      "last_name": "O'Meara",
-      "gender": "male",
+      "first_name": "Sampson",
+      "last_name": "Davidson",
+      "gender": "cat",
+      "fav": false
+    },
+    {
+      "id": 5,
+      "first_name": "Jooka",
+      "last_name": "Davidson",
+      "gender": "cat",
+      "fav": true
+    },
+    {
+      "id": 6,
+      "first_name": "Kitten",
+      "last_name": "Kitten",
+      "gender": "cat",
       "fav": false
     }
   ]

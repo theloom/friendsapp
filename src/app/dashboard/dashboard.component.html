@@ -1,0 +1,19 @@
+<h1>Dashboard</h1>
+
+<div class="container">
+  <div class="dashboard">
+    <div class="dashboard-box dashboard-stat">
+      <h2>Statistics about your account</h2>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <span class="stat-number" *ngIf="friends">{{friends.length}}</span>
+          <span class="stat-description">Friends</span>
+        </li>
+        <li class="list-inline-item">
+          <span class="stat-number">{{getCats()}}</span>
+          <span class="stat-description">Cats</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
