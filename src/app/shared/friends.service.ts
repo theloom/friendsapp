@@ -22,4 +22,14 @@ export class FriendsService {
       .map(res => res.json());
   }
 
+  saveFriend(friend): Observable<Friend[]> {
+
+    return this.http.put(`http://localhost:3000/friends/${friend.id}`, friend, {
+      headers: new Headers({
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      })
+    }).map(res => res.json());
+
+  }
 }

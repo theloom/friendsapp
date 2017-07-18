@@ -1,4 +1,5 @@
 import { TestBed, inject } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
 
 import { FriendsService } from './friends.service';
 

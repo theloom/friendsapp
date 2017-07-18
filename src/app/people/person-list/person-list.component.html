@@ -1,5 +1,3 @@
-<h3>Person List:</h3>
-
 <div class="person-list">
   <div class="row">
     <div class="col-xs-12 col-md-9">
@@ -11,11 +9,11 @@
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">
 
-              <p *ngIf="friends.length > 5">
-                You have more than 3 friends, yay for you.
-              </p>
-
               <p>Total friends: {{friends.length}}</p>
+
+              <p *ngIf="friends && friends.length > 5">
+                You have more than 5 friends, yay for you.
+              </p>
 
               <p *ngIf="selectedFriend">Selected friend: {{selectedFriend.first_name}}</p>
 

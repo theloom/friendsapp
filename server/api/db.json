@@ -5,14 +5,14 @@
       "first_name": "Courtney",
       "last_name": "Davidson",
       "gender": "female",
-      "fav": true
+      "fav": false
     },
     {
       "id": 2,
       "first_name": "Kim",
       "last_name": "Brannock",
       "gender": "female",
-      "fav": true
+      "fav": false
     },
     {
       "id": 3,
@@ -26,7 +26,7 @@
       "first_name": "Nate",
       "last_name": "O'Meara",
       "gender": "male",
-      "fav": true
+      "fav": false
     }
   ]
 }

@@ -14,7 +14,7 @@ import { FriendsService } from '../../shared/friends.service';
 export class PersonListComponent implements OnInit {
   constructor(private friendService: FriendsService) { }
 
-  friends: Friend[];
+  friends: Friend[] = [];
 
   ngOnInit() {
     this.friendService.getFriends()
