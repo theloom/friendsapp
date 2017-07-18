@@ -1,11 +1,12 @@
 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
   <div class="d-flex w-100 justify-content-between">
     <h5 class="mb-1">
-      <!--Display the friend's first and last name here -->
+      {{friend.first_name}} {{friend.last_name}} ({{friend.gender}})
     </h5>
     <small>
       <div class="heart-rating">
-        <span class="fa fa-heart" data-rating="1"></span>
+        <span (click)="onToggleLike()" class="fa"
+        [ngClass]="friend.fav ? 'fa-heart' : 'fa-heart-o'" data-rating="1"></span>
       </div>
     </small>
   </div>

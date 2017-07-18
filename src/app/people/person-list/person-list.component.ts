@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Friend } from '../../shared/friend.model';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-person-list',
@@ -34,7 +35,8 @@ export class PersonListComponent implements OnInit {
 
   testFriends = ["Courtney", "Kim", "Sampson", "Jooka"];
   selectedFriend: Friend;
-  newFriend: string;
+  newFriendFirst: string = "";
+  newFriendLast: string = "";
 
   onSelectFriend = function (selected) {
     this.selectedFriend = selected;
@@ -44,7 +46,9 @@ export class PersonListComponent implements OnInit {
 
     this.friends.push({
       "id": this.friends.length + 1,
-      "first_name": this.newFriend,
+      "first_name": this.newFriendFirst,
+      "last_name": this.newFriendLast,
+      "gender": "unknown",
     });
 
     /*
