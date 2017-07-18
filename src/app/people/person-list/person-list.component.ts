@@ -43,7 +43,6 @@ export class PersonListComponent implements OnInit {
   };
 
   addFriend = function () {
-    this.newFriend.id = this.friends.length + 1;
     this.friendService.addFriend(this.newFriend).subscribe(f => this.onSuccessfulAdd(f));
   };
 

@@ -34,13 +34,6 @@
       "last_name": "Davidson",
       "gender": "cat",
       "fav": true
-    },
-    {
-      "id": 6,
-      "first_name": "Kitten",
-      "last_name": "Kitten",
-      "gender": "cat",
-      "fav": false
     }
   ]
 }
