@@ -1,0 +1,51 @@
+<h3>Person List:</h3>
+
+<div class="person-list">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">
+
+              {{friends[0].first_name}}
+
+              <p>
+                <li *ngFor="let friend of friends">
+                  <a (click)="onSelectFriend(friend)" class="friend">
+                    {{friend.first_name}} {{friend.last_name}} ({{friend.id}})</a>
+                </li>
+              </p>
+
+              <!--
+              <p>
+                <li *ngFor="let friend of testFriends">
+                  <a (click)="onSelectFriend(friend)" class="friend">{{friend}}</a>
+                </li>
+              </p>
+-->
+
+              <p *ngIf="friends.length > 5">
+                You have more than 3 friends, yay for you.
+              </p>
+
+              <p>Total friends: {{friends.length}}</p>
+
+              <p *ngIf="selectedFriend">Selected friend: {{selectedFriend.first_name}}</p>
+
+
+            </h5>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-3 sidebar">
+
+      <input (ngModel)="newFriend" placeholder="Name">
+
+      <a href="#" (click)="addFriend('new friend')">
+        Add someone
+      </a>
+    </div>
+  </div>
+</div>

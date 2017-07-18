@@ -2,29 +2,29 @@
   "friends": [
     {
       "id": 1,
-      "first_name": "Michelle",
-      "last_name": "Mulroy",
+      "first_name": "Courtney",
+      "last_name": "Davidson",
       "gender": "female",
       "fav": true
     },
     {
       "id": 2,
-      "first_name": "Venkat",
-      "last_name": "Subramanian",
-      "gender": "male",
+      "first_name": "Kim",
+      "last_name": "Brannock",
+      "gender": "female",
       "fav": true
     },
     {
       "id": 3,
-      "first_name": "Matt",
-      "last_name": "Forsythe",
+      "first_name": "Steve",
+      "last_name": "Van Dyke",
       "gender": "none",
       "fav": false
     },
     {
       "id": 4,
       "first_name": "Nate",
-      "last_name": "Schutta",
+      "last_name": "O'Meara",
       "gender": "male",
       "fav": true
     }
