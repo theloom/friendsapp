@@ -12,14 +12,14 @@
       "first_name": "Kim",
       "last_name": "Brannock",
       "gender": "female",
-      "fav": true
+      "fav": false
     },
     {
       "id": 3,
       "first_name": "Steve",
       "last_name": "Van Dyke",
       "gender": "none",
-      "fav": true
+      "fav": false
     },
     {
       "id": 4,
