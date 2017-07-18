@@ -5,7 +5,7 @@
     </h5>
     <small>
       <div class="heart-rating">
-        <span (click)="onToggleLike()" class="fa"
+        <span (click)="onToggleLike(); false" class="fa"
         [ngClass]="friend.fav ? 'fa-heart' : 'fa-heart-o'" data-rating="1"></span>
       </div>
     </small>

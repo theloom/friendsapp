@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Friend } from '../../shared/friend.model';
 import { NgModel } from '@angular/forms';
+import { Injectable } from '@angular/core';
+import { FriendsService } from '../../shared/friends.service';
 
 @Component({
   selector: 'app-person-list',
@@ -8,59 +10,35 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['person-list.component.css']
 })
 
+@Injectable()
 export class PersonListComponent implements OnInit {
-  constructor() { }
+  constructor(private friendService: FriendsService) { }
 
-  ngOnInit() { }
+  friends: Friend[];
 
-  friends: Friend[] = [{
-    "id": 1,
-    "first_name": "Courtney",
-    "last_name": "Davidson",
-    "gender": "female",
-    "fav": true
-  }, {
-    "id": 2,
-    "first_name": "Jooka",
-    "last_name": "Davidson",
-    "gender": "male",
-    "fav": true
-  }, {
-    "id": 3,
-    "first_name": "Sampson",
-    "last_name": "Davidson",
-    "gender": "male",
-    "fav": true
-  }];
+  ngOnInit() {
+    this.friendService.getFriends()
+      .subscribe(friends => this.friends = friends);
+  }
 
-  testFriends = ["Courtney", "Kim", "Sampson", "Jooka"];
   selectedFriend: Friend;
   newFriendFirst: string = "";
   newFriendLast: string = "";
+  newFriend: Friend;
 
   onSelectFriend = function (selected) {
     this.selectedFriend = selected;
   };
 
   addFriend = function () {
-
-    this.friends.push({
-      "id": this.friends.length + 1,
-      "first_name": this.newFriendFirst,
-      "last_name": this.newFriendLast,
-      "gender": "unknown",
-    });
-
-    /*
-    this.friends.push({
-      "id": this.friends.length + 1,
-      "first_name": "Sampson",
-      "last_name": "Davidson",
-      "gender": "female",
-      "fav": true
-    });
-    */
-
-  };
+    if (this.newFriendFirst) {
+      this.friends.push({
+        "id": this.friends.length + 1,
+        "first_name": this.newFriendFirst,
+        "last_name": this.newFriendLast,
+        "gender": "unknown",
+      });
+    };
+  }
 
 }
